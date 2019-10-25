@@ -1,14 +1,10 @@
-universe = vanilla
+executable = 
+
+transfer_input_files = 
+
 log = job_$(Cluster).log
 error = job_$(Cluster)_$(Process).err
 output = job_$(Cluster)_$(Process).out
-
-executable = 
-arguments = 
-
-should_transfer_files = YES
-when_to_transfer_output = ON_EXIT
-transfer_input_files = 
 
 request_cpus = 1
 request_memory = 1GB
