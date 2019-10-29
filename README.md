@@ -4,7 +4,7 @@ This repository contains a example job submission to CHTC's High Throughput Comp
 
 ## Requirements
 
-To run this example, you will need access to an HTCondor scheduled system, likely with a newish version of HTCondor, and where the resources available to you are using CentOS 7 (or a Linux distribution from the same Red Hat family). 
+To run this example, you will need access to an HTCondor scheduled system, likely with a newish version of HTCondor, and where the resources available to you are using CentOS 7 (or a Linux distribution from the same Red Hat family). It is designed to work for anyone with an account on an CHTC submit server. 
 
 ## Included
 
