@@ -30,11 +30,13 @@ cd example-R-iris
 ```
 3. We've provided most of the files, but we still need to provide information to the submit file (`job.submit`) about the job's executable and input files. The input files should include all the files listed above (`summarize.R`, `iris_data.csv`, `tidyverse.tar.gz`) and a link to CHTC's copy of R, which can be referenced with the link `http://proxy.chtc.wisc.edu/SQUID/chtc/R351.tar.gz`. The `run_R.sh` file should be the job's "executable". 
 4. The `run_R.sh` file has the command to run R, but will need additional commands to set up an R installation as part of the job. Modify it based on the information provided in [this section of the CHTC R jobs guide](http://chtc.cs.wisc.edu/r-jobs.shtml#script). Note that our packages are saved in a file called `tidyverse.tar.gz` and the folder inside is called `tidy`. 
-5. Once you've made the changes to the submission, try submitting the job using:
+5. Once you've made the needed changes to the two submission files (`job.submit` and `run_R.sh`), try submitting the job using:
 ```
 condor_submit job.submit
 ```
 
 ## What's Missing
 
-For real jobs, you may have to create your own `tar.gz` file with the packages you need and submit more than one job at once. 
+For real jobs, you may have to create your own `tar.gz` file with the packages you need. 
+
+After getting one job to run successfully, there are a variety of ways to submit [multiple jobs with different inputs](http://chtc.cs.wisc.edu/multiple-jobs). 
