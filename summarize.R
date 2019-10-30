@@ -15,18 +15,17 @@ tidy_iris %>%
   summarize(Minimum = min(Value), Median = median(Value), Maximum = max(Value)) %>%
   write_csv("summary.csv")
 
-tidy_iris %>%
+species_boxplot <- tidy_iris %>%
   filter(Measure == "Length") %>%
   ggplot() +
   geom_boxplot(aes(x = Species, y = Value)) + 
   facet_grid(. ~ Part) + 
     theme_minimal()
-ggsave("species_comparison_boxplot.png")
+ggsave("species_comparison_boxplot.pdf", plot = species_boxplot)
 
-tidy_iris %>%
+histograms <- tidy_iris %>%
   ggplot(aes(x = Value)) + 
   geom_histogram(binwidth = .2) + 
   facet_grid(Part ~ Measure) + 
   theme_minimal()
-ggsave("measurement_histograms.png")
-
+ggsave("measurement_histograms.pdf", plot = histograms)
